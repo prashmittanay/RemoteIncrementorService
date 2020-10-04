@@ -12,7 +12,12 @@
         <service
             android:name=".IncrementorService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="remote.incrementor.service" />
+            </intent-filter>
+        </service>
 
         <activity android:name=".MainActivity">
             <intent-filter>
